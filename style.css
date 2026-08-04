@@ -818,14 +818,14 @@ img {
     }
 
     .home__title {
-        top:-20%;
+        top:-40%;
         
         font-size: 1.4rem !important;
         margin-bottom: 1rem;
     }
 
     .home__body {
-        top:-15%
+        top:-35%
         font-size: 0.85rem;
         max-width: 100%;
         margin-bottom: 1.5rem;
