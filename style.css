@@ -882,81 +882,66 @@ img {
     }
 
     /* About / Binder Section */
- @media screen and (max-width: 900px) {
+/*=============== SCROLLABLE DESKTOP BINDER ON MOBILE ===============*/
+@media screen and (max-width: 900px) {
 
-    /* 1. Reset Container Padding so the scaled element goes full-width */
-    .about.container {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        overflow: visible !important;
+    /* 1. Create a scrollable container wrapper */
+    .about {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        padding: 1rem 0 !important;
     }
 
-    /* 2. The Wrapper: Force it to be the desktop width (900px) and scale it down */
+    /* 2. Force the binder wrapper to stay at its full desktop size */
     .about__binder-wrapper {
         position: relative !important;
-        width: 900px !important; /* Desktop width */
-        height: 600px !important; /* Approximate desktop height */
-        margin: 3rem 0 0 0 !important;
+        width: 900px !important;  /* Locks to exact desktop width */
+        height: 600px !important; /* Locks to desktop height */
+        margin: 2rem auto !important;
         display: block !important;
-        /* Scale the whole binder down to fit the current mobile screen width */
-        transform-origin: top left;
-        /* This assumes a 375px-414px average mobile width. 
-           If the screen is wider, it scales less. If narrower, more. */
-        transform: scale(calc(min(1vw * 100, 414px) / 900)); 
-        /* To hide the content that overflows the side of the screen */
-        overflow-x: visible;
-        /* Optional: Add scrollbars if you want the user to be able to pan easily */
-        /* overflow-x: scroll; -webkit-overflow-scrolling: touch; */
+        transform: none !important; /* Remove scaling */
     }
 
-    /* 3. The Binder Image (The background of the pages) */
+    /* 3. Ensure the background binder image fits the 900px wrapper */
     .about__frame {
-        width: 100% !important;
-        height: 100% !important;
+        width: 900px !important;
+        height: 600px !important;
         position: absolute !important;
         top: 0;
         left: 0;
-        object-fit: contain; /* Ensures the full binder shows without stretching */
         z-index: 1;
     }
 
-    /* 4. Left Page Content: Restore absolute positioning relative to the wrapper (900px) */
+    /* 4. Keep desktop absolute positioning for left page */
     .about__photo-stack {
         position: absolute !important;
-        top: 15% !important; /* Adjust to match desktop */
-        left: 5% !important;  /* Adjust to match desktop */
-        width: 40% !important; /* Adjust to match desktop */
-        text-align: left;
-        margin-bottom: 0;
+        top: 15% !important;
+        left: 6% !important;
+        width: 350px !important;
         z-index: 2;
     }
 
     .about__portrait {
-        position: relative !important;
         width: 100% !important;
         height: auto !important;
-        margin: 0;
     }
 
-    /* 5. Right Page Content: Restore absolute positioning relative to the wrapper (900px) */
+    /* 5. Keep desktop absolute positioning for right page */
     .about__data {
         position: absolute !important;
-        top: 12% !important; /* Adjust to match desktop */
-        right: 5% !important; /* Adjust to match desktop */
-        width: 45% !important; /* Adjust to match desktop */
-        height: auto !important;
-        padding: 0 !important;
-        text-align: left !important;
+        top: 12% !important;
+        right: 8% !important;
+        width: 380px !important;
         z-index: 2;
+        text-align: left !important;
+        padding: 0 !important;
     }
 
     .about__description {
-        font-size: 16px !important; /* Keep readable desktop size */
+        font-size: 15px !important;
         line-height: 1.4 !important;
-        color: #4a4a4a !important; /* Match desktop color */
     }
 
-    /* Ensure the pin and grain show up if they were hidden */
     .about__sign, 
     .about__grain {
         display: block !important;
