@@ -818,11 +818,14 @@ img {
     }
 
     .home__title {
+        top:5%;
+        
         font-size: 1.4rem !important;
         margin-bottom: 1rem;
     }
 
     .home__body {
+        top:10%
         font-size: 0.85rem;
         max-width: 100%;
         margin-bottom: 1.5rem;
@@ -844,7 +847,7 @@ img {
 
     .home__house {
         width: 240px !important;
-        top: 35% !important;
+        top: 30% !important;
         left: 50% !important;
         transform: translate(-50%, -50%);
         z-index: 3 !important;
