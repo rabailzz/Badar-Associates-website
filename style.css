@@ -744,16 +744,23 @@ img {
     font-size: var(--smaller-font-size);
     width: 190px;
 }
-
-/*=============== PROPER MOBILE RESPONSIVE FIXES ===============*/
+/*=============== CLEAN MOBILE RESPONSIVE FIXES ===============*/
 @media screen and (max-width: 900px) {
     .container {
         max-width: 100% !important;
-        margin-inline: 1rem !important;
+        margin-inline: 0.5rem !important;
+        padding: 0 0.5rem;
     }
 
+    /* Navigation */
+    .nav {
+        padding: 0 0.5rem;
+    }
     .nav__menu ul {
-        column-gap: 1rem;
+        column-gap: 0.8rem;
+    }
+    .navl__logo {
+        font-size: 0.6rem;
     }
 
     /* Home Section */
@@ -761,6 +768,7 @@ img {
         grid-template-columns: 1fr !important;
         text-align: center;
         padding-top: 5rem;
+        row-gap: 1rem;
     }
 
     .home__data {
@@ -770,23 +778,37 @@ img {
         text-align: center;
     }
 
+    .home__title {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem;
+    }
+
     .home__body {
+        font-size: 0.85rem;
         max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        margin-bottom: 1.5rem;
     }
 
     .home__images {
         position: relative !important;
-        width: 100% !important;
-        max-width: 300px;
-        height: 300px !important;
-        margin: 2rem auto 0 auto;
+        width: 280px !important;
+        height: 280px !important;
+        margin: 1rem auto 0 auto;
+        left: auto !important;
+        right: auto !important;
     }
 
     .home__images img {
         position: absolute !important;
         max-width: 100%;
+    }
+
+    .home__house {
+        width: 260px !important;
+    }
+
+    .home__lamp, .lamp-glow, .home__salt-1, .home__salt-2, .home__pepper {
+        display: none !important; /* Hide cluttered background decorations on mobile home */
     }
 
     /* About / Binder Section */
@@ -797,6 +819,12 @@ img {
         display: flex;
         flex-direction: column;
         top: 0 !important;
+        margin-top: 3rem;
+    }
+
+    .about__frame {
+        width: 100% !important;
+        height: auto !important;
     }
 
     .about__photo-stack {
@@ -812,7 +840,7 @@ img {
         position: relative !important;
         top: 0 !important;
         left: 0 !important;
-        width: 80% !important;
+        width: 70% !important;
         height: auto !important;
         margin: 0 auto;
     }
@@ -827,6 +855,10 @@ img {
         text-align: center;
     }
 
+    .about__description {
+        font-size: 0.8rem !important;
+    }
+
     .about__sign, 
     .about__grain {
         display: none !important;
@@ -834,6 +866,8 @@ img {
 
     /* Services Section */
     .services__content {
+        display: flex;
+        flex-direction: column;
         gap: 3rem;
         padding: 1rem 0;
     }
@@ -842,18 +876,19 @@ img {
         flex-direction: column !important;
         align-items: center;
         text-align: center;
-        gap: 20px;
+        gap: 15px;
     }
 
     .services__card:first-child {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     .services__images {
-        width: 100% !important;
-        max-width: 260px;
-        height: 220px;
+        position: relative !important;
+        width: 240px !important;
+        height: 200px !important;
         margin: 0 auto;
+        left: auto !important;
     }
 
     .services__hanging, 
@@ -861,12 +896,24 @@ img {
     .services__main-img1, 
     .services__main-img2, 
     .services__main-img3 {
+        position: absolute !important;
         left: 50% !important;
-        transform: translateX(-50%);
+        transform: translateX(-50%) !important;
+        width: 240px !important;
     }
 
-    .services__paper-bg {
+    .services__hanging {
+        top: -150px !important;
+    }
+
+    .services__paper-bg,
+    .services__hanging-text {
         display: none !important;
+    }
+
+    .services__intro {
+        margin-top: 0 !important;
+        padding: 0 1rem;
     }
 
     .services__card:nth-child(1) .services__intro,
@@ -875,17 +922,28 @@ img {
         margin-top: 0 !important;
     }
 
-    /* Contact & Footer */
+    .services__summary {
+        font-size: 0.85rem;
+    }
+
+    /* Contact Section */
     .contact__container {
-        grid-template-columns: 1fr !important;
+        display: flex;
+        flex-direction: column !important;
         gap: 2rem;
         text-align: center;
+        padding: 0 1rem;
+    }
+
+    .contact__map {
+        max-width: 100% !important;
+        margin: 0 auto;
     }
 
     .contact__right-column {
         margin-left: 0 !important;
         align-items: center;
-        margin-top: 1rem;
+        margin-top: 0;
     }
 
     .contact__telephone {
@@ -895,11 +953,15 @@ img {
     .section__title {
         left: 0 !important;
         transform: none !important;
+        font-size: 24px !important;
     }
 
+    /* Footer */
     .footer__container {
-        grid-template-columns: 1fr !important;
+        display: flex;
+        flex-direction: column !important;
         text-align: center;
         gap: 1.5rem;
     }
+}
 }
