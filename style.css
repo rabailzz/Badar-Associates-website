@@ -882,57 +882,86 @@ img {
     }
 
     /* About / Binder Section */
-   /* About / Binder Section - Keep Desktop Layout */
-  /* About / Binder Section - Clean Mobile Stack */
+ @media screen and (max-width: 900px) {
+
+    /* 1. Reset Container Padding so the scaled element goes full-width */
+    .about.container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        overflow: visible !important;
+    }
+
+    /* 2. The Wrapper: Force it to be the desktop width (900px) and scale it down */
     .about__binder-wrapper {
         position: relative !important;
-        width: 100% !important;
-        height: auto !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        margin-top: 3rem !important;
+        width: 900px !important; /* Desktop width */
+        height: 600px !important; /* Approximate desktop height */
+        margin: 3rem 0 0 0 !important;
+        display: block !important;
+        /* Scale the whole binder down to fit the current mobile screen width */
+        transform-origin: top left;
+        /* This assumes a 375px-414px average mobile width. 
+           If the screen is wider, it scales less. If narrower, more. */
+        transform: scale(calc(min(1vw * 100, 414px) / 900)); 
+        /* To hide the content that overflows the side of the screen */
+        overflow-x: visible;
+        /* Optional: Add scrollbars if you want the user to be able to pan easily */
+        /* overflow-x: scroll; -webkit-overflow-scrolling: touch; */
     }
 
+    /* 3. The Binder Image (The background of the pages) */
     .about__frame {
         width: 100% !important;
-        height: auto !important;
-        position: relative !important;
+        height: 100% !important;
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        object-fit: contain; /* Ensures the full binder shows without stretching */
+        z-index: 1;
     }
 
+    /* 4. Left Page Content: Restore absolute positioning relative to the wrapper (900px) */
     .about__photo-stack {
-        position: relative !important;
-        width: 80% !important;
-        max-width: 280px !important;
-        margin: 0 auto 1.5rem auto !important;
-        left: auto !important;
-        top: auto !important;
-        text-align: center;
+        position: absolute !important;
+        top: 15% !important; /* Adjust to match desktop */
+        left: 5% !important;  /* Adjust to match desktop */
+        width: 40% !important; /* Adjust to match desktop */
+        text-align: left;
+        margin-bottom: 0;
+        z-index: 2;
     }
 
     .about__portrait {
         position: relative !important;
         width: 100% !important;
         height: auto !important;
-        margin: 0 auto;
-        left: auto !important;
-        top: auto !important;
+        margin: 0;
     }
 
+    /* 5. Right Page Content: Restore absolute positioning relative to the wrapper (900px) */
     .about__data {
-        position: relative !important;
-        width: 90% !important;
-        max-width: 320px !important;
-        margin: 0 auto !important;
-        left: auto !important;
-        top: auto !important;
-        padding: 1rem !important;
-        text-align: center !important;
+        position: absolute !important;
+        top: 12% !important; /* Adjust to match desktop */
+        right: 5% !important; /* Adjust to match desktop */
+        width: 45% !important; /* Adjust to match desktop */
+        height: auto !important;
+        padding: 0 !important;
+        text-align: left !important;
+        z-index: 2;
     }
 
     .about__description {
-        font-size: 0.8rem !important;
+        font-size: 16px !important; /* Keep readable desktop size */
+        line-height: 1.4 !important;
+        color: #4a4a4a !important; /* Match desktop color */
     }
+
+    /* Ensure the pin and grain show up if they were hidden */
+    .about__sign, 
+    .about__grain {
+        display: block !important;
+    }
+}
     /* Services Section */
     .services__content {
         display: flex;
