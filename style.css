@@ -853,7 +853,7 @@ img {
     .home__lamp {
         width: 200px !important;
         height: 160px !important;
-        top: 1% !important;
+        top: -20% !important;
         left: 50% !important;
         transform: translateX(-50%);
         z-index: 5 !important;
@@ -862,7 +862,7 @@ img {
     .lamp-glow {
         width: 160px !important;
         height: 200px !important;
-        top: 9% !important;
+        top: -10% !important;
         left: 50% !important;
         transform: translateX(-50%);
         z-index: 4 !important;
