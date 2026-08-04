@@ -408,7 +408,7 @@ img {
     z-index: 3;
 }
 .about__description {
-    color: var(--text-color);
+    color: black;
     margin-bottom: 2rem;
     line-height: 1.6;
     font-size: small;
