@@ -746,7 +746,6 @@ img {
 }
 
 
-
 /*=============== REFINED MOBILE STYLES ===============*/
 @media screen and (max-width: 900px) {
     .container {
@@ -830,11 +829,11 @@ img {
     }
 
     /* Home Images: Lamp, Glow, and House adjusted */
-   .home__images {
+    .home__images {
         position: relative !important;
         width: 300px !important;
-        height: 250px !important;
-        margin: 0.2rem auto 0 auto !important;
+        height: 320px !important;
+        margin: 1.5rem auto 0 auto;
         left: auto !important;
         right: auto !important;
     }
@@ -845,7 +844,7 @@ img {
 
     .home__house {
         width: 240px !important;
-        top: 65% !important;
+        top: 54% !important;
         left: 50% !important;
         transform: translate(-50%, -50%);
         z-index: 3 !important;
@@ -854,7 +853,7 @@ img {
     .home__lamp {
         width: 200px !important;
         height: 160px !important;
-        top: -38% !important;
+        top: 2% !important;
         left: 50% !important;
         transform: translateX(-50%);
         z-index: 5 !important;
@@ -863,11 +862,12 @@ img {
     .lamp-glow {
         width: 160px !important;
         height: 200px !important;
-        top: -25% !important;
+        top: 10% !important;
         left: 50% !important;
         transform: translateX(-50%);
         z-index: 4 !important;
     }
+
     /* Completely hide salt and pepper on mobile */
     .home__salt-1, 
     .home__salt-2, 
