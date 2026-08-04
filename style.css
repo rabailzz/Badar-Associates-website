@@ -883,57 +883,56 @@ img {
 
     /* About / Binder Section */
    /* About / Binder Section - Keep Desktop Layout */
+  /* About / Binder Section - Clean Mobile Stack */
     .about__binder-wrapper {
         position: relative !important;
         width: 100% !important;
-        max-width: 900px !important;
         height: auto !important;
-        margin: 3rem auto 0 auto !important;
-        display: block !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin-top: 3rem !important;
     }
 
     .about__frame {
         width: 100% !important;
         height: auto !important;
+        position: relative !important;
     }
 
     .about__photo-stack {
-        position: absolute !important;
-        /* Adjust these percentages to match your desktop placement */
-        top: 20% !important;
-        left: 10% !important;
-        width: 40% !important;
-        text-align: left;
-        margin-bottom: 0;
+        position: relative !important;
+        width: 80% !important;
+        max-width: 280px !important;
+        margin: 0 auto 1.5rem auto !important;
+        left: auto !important;
+        top: auto !important;
+        text-align: center;
     }
 
     .about__portrait {
         position: relative !important;
         width: 100% !important;
         height: auto !important;
-        margin: 0;
+        margin: 0 auto;
+        left: auto !important;
+        top: auto !important;
     }
 
     .about__data {
-        position: absolute !important;
-        /* Adjust these percentages to match your desktop placement */
-        top: 20% !important;
-        right: 10% !important;
-        width: 45% !important;
-        height: auto !important;
-        padding: 0 !important;
-        text-align: left !important;
+        position: relative !important;
+        width: 90% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
+        left: auto !important;
+        top: auto !important;
+        padding: 1rem !important;
+        text-align: center !important;
     }
 
     .about__description {
-        font-size: 0.75rem !important;
+        font-size: 0.8rem !important;
     }
-
-    .about__sign, 
-    .about__grain {
-        display: block !important; /* Bring back elements if hidden before */
-    }
-
     /* Services Section */
     .services__content {
         display: flex;
