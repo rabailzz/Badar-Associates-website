@@ -748,7 +748,8 @@ img {
 /*=============== MINIATURE DESKTOP VIEW FOR MOBILE ===============*/
 @media screen and (max-width: 900px) {
     body {
-        min-width: 1150px; /* Forces mobile to render the full desktop width */
-        zoom: 0.35;        /* Shrinks the entire desktop layout down to fit the phone screen */
+        min-width: 1150px;
+        zoom: 0.55;        /* Increased so it's bigger and fills the screen better */
+        transform-origin: top left;
     }
 }
