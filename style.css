@@ -829,7 +829,7 @@ img {
         margin-bottom: 1.5rem;
     }
 
-    /* Home Images: No salt/pepper, lamp dragged down */
+    /* Home Images: Lamp, Glow, and House adjusted */
     .home__images {
         position: relative !important;
         width: 300px !important;
@@ -845,17 +845,16 @@ img {
 
     .home__house {
         width: 240px !important;
-        top: 60% !important;
+        top: 54% !important;
         left: 50% !important;
         transform: translate(-50%, -50%);
         z-index: 3 !important;
     }
 
-    /* Lamp dragged down closer to the house */
     .home__lamp {
         width: 200px !important;
         height: 160px !important;
-        top: -2% !important;
+        top: 2% !important;
         left: 50% !important;
         transform: translateX(-50%);
         z-index: 5 !important;
@@ -864,7 +863,7 @@ img {
     .lamp-glow {
         width: 160px !important;
         height: 200px !important;
-        top: 5% !important;
+        top: 10% !important;
         left: 50% !important;
         transform: translateX(-50%);
         z-index: 4 !important;
