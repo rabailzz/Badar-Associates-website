@@ -803,19 +803,6 @@ img {
     }
 
     /* Home Section */
- .home__container {
-        grid-template-columns: 1fr !important;
-        text-align: center;
-        padding-top: 3.5rem !important; /* Decreased from 5rem to bring everything up */
-        row-gap: 0.3rem !important;
-    }
-
-    .home__title {
-        position: static !important;
-        font-size: 1.3rem !important;
-        margin-top: -0.5rem !important; /* Pulls the title even higher */
-        margin-bottom: 0.3rem !important;
-    }
 
     .home__data {
         display: flex;
@@ -826,13 +813,27 @@ img {
 
 
 
+  .home__container {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        padding-top: 6rem !important; /* Increased to push everything down below the header */
+        row-gap: 1rem !important;
+    }
+
+    .home__title {
+        position: static !important;
+        font-size: 1.3rem !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.8rem !important;
+    }
+
     .home__body {
         position: static !important;
         font-size: 0.8rem !important;
         max-width: 100%;
-        margin-bottom: 0.8rem !important;
+        margin-top: 0.5rem !important; /* Pushes the description down from the title */
+        margin-bottom: 1rem !important;
     }
-
     /* Home Images: Lamp, Glow, and House adjusted */
     .home__images {
         position: relative !important;
