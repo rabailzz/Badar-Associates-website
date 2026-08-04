@@ -747,8 +747,7 @@ img {
 
 
 
-
-/*=============== FIXED MOBILE RESPONSIVE STYLES ===============*/
+/*=============== REFINED MOBILE STYLES ===============*/
 @media screen and (max-width: 900px) {
     .container {
         max-width: 100% !important;
@@ -767,7 +766,7 @@ img {
         min-height: var(--header-height);
         flex-direction: column;
         padding: 0.5rem 0;
-        gap: 0.5rem;
+        gap: 0.3rem;
     }
 
     .nav__brand {
@@ -796,11 +795,19 @@ img {
         font-size: 0.8rem;
     }
 
+    /* Remove the mobile toggle/blue icon */
+    .nav__toggle, 
+    .nav__close, 
+    .nav__menu div[class*="toggle"],
+    .nav i {
+        display: none !important;
+    }
+
     /* Home Section */
     .home__container {
         grid-template-columns: 1fr !important;
         text-align: center;
-        padding-top: 7rem; /* Extra space to clear the taller header */
+        padding-top: 7rem;
         row-gap: 1rem;
     }
 
@@ -822,7 +829,7 @@ img {
         margin-bottom: 1.5rem;
     }
 
-    /* Home Images & Restoring Salt/Pepper behind the house */
+    /* Home Images: No salt/pepper, lamp dragged down */
     .home__images {
         position: relative !important;
         width: 300px !important;
@@ -838,49 +845,36 @@ img {
 
     .home__house {
         width: 240px !important;
-        top: 55% !important;
+        top: 60% !important;
         left: 50% !important;
         transform: translate(-50%, -50%);
         z-index: 3 !important;
     }
 
+    /* Lamp dragged down closer to the house */
     .home__lamp {
-        width: 220px !important;
-        height: 180px !important;
-        top: -15% !important;
+        width: 200px !important;
+        height: 160px !important;
+        top: -2% !important;
         left: 50% !important;
         transform: translateX(-50%);
         z-index: 5 !important;
     }
 
     .lamp-glow {
-        width: 180px !important;
-        height: 220px !important;
+        width: 160px !important;
+        height: 200px !important;
+        top: 5% !important;
         left: 50% !important;
         transform: translateX(-50%);
         z-index: 4 !important;
     }
 
-    /* Salt and Pepper brought back behind the house */
-    .home__salt-1 {
-        width: 180px !important;
-        top: 0 !important;
-        left: 10% !important;
-        z-index: 1 !important;
-    }
-
-    .home__salt-2 {
-        width: 180px !important;
-        bottom: 0 !important;
-        left: 5% !important;
-        z-index: 1 !important;
-    }
-
+    /* Completely hide salt and pepper on mobile */
+    .home__salt-1, 
+    .home__salt-2, 
     .home__pepper {
-        width: 180px !important;
-        right: 5% !important;
-        bottom: 0 !important;
-        z-index: 1 !important;
+        display: none !important;
     }
 
     /* About / Binder Section */
