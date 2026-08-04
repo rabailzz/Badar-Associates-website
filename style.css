@@ -744,7 +744,11 @@ img {
     font-size: var(--smaller-font-size);
     width: 190px;
 }
-/*=============== CLEAN MOBILE RESPONSIVE FIXES ===============*/
+
+
+
+
+/*=============== FIXED MOBILE RESPONSIVE STYLES ===============*/
 @media screen and (max-width: 900px) {
     .container {
         max-width: 100% !important;
@@ -752,22 +756,51 @@ img {
         padding: 0 0.5rem;
     }
 
-    /* Navigation */
+    /* Fixed Header / Nav */
+    .header {
+        position: fixed;
+        padding-bottom: 0.5rem;
+    }
+
     .nav {
-        padding: 0 0.5rem;
+        height: auto !important;
+        min-height: var(--header-height);
+        flex-direction: column;
+        padding: 0.5rem 0;
+        gap: 0.5rem;
     }
-    .nav__menu ul {
-        column-gap: 0.8rem;
+
+    .nav__brand {
+        align-items: center;
+        text-align: center;
     }
+
     .navl__logo {
-        font-size: 0.6rem;
+        font-size: 0.8rem !important;
+    }
+
+    .navl__description p {
+        font-size: 0.7rem !important;
+        margin-top: 0;
+    }
+
+    .nav__menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 1.2rem;
+        flex-wrap: wrap;
+    }
+
+    .nav__link {
+        font-size: 0.8rem;
     }
 
     /* Home Section */
     .home__container {
         grid-template-columns: 1fr !important;
         text-align: center;
-        padding-top: 5rem;
+        padding-top: 7rem; /* Extra space to clear the taller header */
         row-gap: 1rem;
     }
 
@@ -779,7 +812,7 @@ img {
     }
 
     .home__title {
-        font-size: 1.5rem !important;
+        font-size: 1.4rem !important;
         margin-bottom: 1rem;
     }
 
@@ -789,26 +822,65 @@ img {
         margin-bottom: 1.5rem;
     }
 
+    /* Home Images & Restoring Salt/Pepper behind the house */
     .home__images {
         position: relative !important;
-        width: 280px !important;
-        height: 280px !important;
-        margin: 1rem auto 0 auto;
+        width: 300px !important;
+        height: 320px !important;
+        margin: 1.5rem auto 0 auto;
         left: auto !important;
         right: auto !important;
     }
 
     .home__images img {
         position: absolute !important;
-        max-width: 100%;
     }
 
     .home__house {
-        width: 260px !important;
+        width: 240px !important;
+        top: 55% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+        z-index: 3 !important;
     }
 
-    .home__lamp, .lamp-glow, .home__salt-1, .home__salt-2, .home__pepper {
-        display: none !important; /* Hide cluttered background decorations on mobile home */
+    .home__lamp {
+        width: 220px !important;
+        height: 180px !important;
+        top: -15% !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+        z-index: 5 !important;
+    }
+
+    .lamp-glow {
+        width: 180px !important;
+        height: 220px !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+        z-index: 4 !important;
+    }
+
+    /* Salt and Pepper brought back behind the house */
+    .home__salt-1 {
+        width: 180px !important;
+        top: 0 !important;
+        left: 10% !important;
+        z-index: 1 !important;
+    }
+
+    .home__salt-2 {
+        width: 180px !important;
+        bottom: 0 !important;
+        left: 5% !important;
+        z-index: 1 !important;
+    }
+
+    .home__pepper {
+        width: 180px !important;
+        right: 5% !important;
+        bottom: 0 !important;
+        z-index: 1 !important;
     }
 
     /* About / Binder Section */
@@ -963,5 +1035,4 @@ img {
         text-align: center;
         gap: 1.5rem;
     }
-}
 }
