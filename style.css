@@ -844,7 +844,7 @@ img {
 
     .home__house {
         width: 240px !important;
-        top: 45% !important;
+        top: 35% !important;
         left: 50% !important;
         transform: translate(-50%, -50%);
         z-index: 3 !important;
