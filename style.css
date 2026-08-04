@@ -803,11 +803,18 @@ img {
     }
 
     /* Home Section */
-    .home__container {
+ .home__container {
         grid-template-columns: 1fr !important;
         text-align: center;
-        padding-top: 5rem !important;
-        row-gap: 0.5rem !important;
+        padding-top: 3.5rem !important; /* Decreased from 5rem to bring everything up */
+        row-gap: 0.3rem !important;
+    }
+
+    .home__title {
+        position: static !important;
+        font-size: 1.3rem !important;
+        margin-top: -0.5rem !important; /* Pulls the title even higher */
+        margin-bottom: 0.3rem !important;
     }
 
     .home__data {
@@ -817,11 +824,7 @@ img {
         text-align: center;
     }
 
-    .home__title {
-        position: static !important;
-        font-size: 1.3rem !important;
-        margin-bottom: 0.7rem !important;
-    }
+
 
     .home__body {
         position: static !important;
