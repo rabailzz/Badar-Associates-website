@@ -932,7 +932,7 @@ img {
 
    
     .about__description {
-                   padding-top: 20px !important;
+                   padding-top: -10px !important;
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
