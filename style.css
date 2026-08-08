@@ -918,7 +918,7 @@ img {
 
     .about__binder-wrapper {
         position: relative !important;
-        width: 950px !important;   /* zoomed canvas — same proportions as desktop */
+        width: 850px !important;   /* zoomed canvas — same proportions as desktop */
         height: 600px !important;
         max-width: none !important;
         margin: 1rem 0 !important;
