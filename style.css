@@ -895,7 +895,7 @@ img {
    /* About / Binder Section — Zoomed, Swipeable, Same Layout as Desktop */
     /* About / Binder Section — Zoomed, Swipeable, Same Layout as Desktop */
       #about {
-        padding-top: 0rem !important;
+        padding-top: -2rem !important;
     }
     
     .about {
