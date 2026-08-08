@@ -893,16 +893,7 @@ img {
  /*=============== ABOUT SECTION — MOBILE FINAL OVERRIDE ===============*/
 @media screen and (max-width: 900px) {
    /* About / Binder Section — Zoomed, Swipeable, Same Layout as Desktop */
-       .about__description {
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        color: #000 !important;
-        font-size: 13px !important;
-        line-height: 1.5 !important;
-        z-index: 6 !important;
-        position: relative !important;
-    }
+    /* About / Binder Section — Zoomed, Swipeable, Same Layout as Desktop */
     .about {
         overflow-x: auto !important;
         overflow-y: hidden !important;
@@ -918,7 +909,7 @@ img {
 
     .about__binder-wrapper {
         position: relative !important;
-        width: 400px !important;   /* zoomed canvas — same proportions as desktop */
+        width: 950px !important;   /* zoomed canvas — same proportions as desktop */
         height: 600px !important;
         max-width: none !important;
         margin: 1rem 0 !important;
@@ -926,7 +917,6 @@ img {
         transform: none !important;
         flex-shrink: 0;
         display: block !important;
-  
     }
 
     /* Everything below (top/left/width %) stays EXACTLY as your desktop rules —
@@ -939,15 +929,25 @@ img {
         scroll-snap-stop: always !important;
     }
 
-    .about__data {
-        scroll-snap-align: start !important;
-        scroll-snap-stop: always !important;
-     
+   
+    .about__description {
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
+        color: #000 !important;
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+        z-index: 6 !important;
+        position: relative !important;
+    }
+
+    .about__data {
+         display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
         z-index: 5 !important;
-    
+        scroll-snap-align: start !important;
+        scroll-snap-stop: always !important;
     }
 
     .about__grain,
@@ -968,6 +968,7 @@ img {
         font-style: italic;
         margin-bottom: 0.5rem;
     }
+    
 }
     /* Services Section */
     .services__content {
