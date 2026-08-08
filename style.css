@@ -913,7 +913,7 @@ img {
         height: 600px !important;
         max-width: none !important;
         margin: 1rem 0 !important;
-        top: 0 !important;
+        top: 50 !important;
         transform: none !important;
         flex-shrink: 0;
         display: block !important;
