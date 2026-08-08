@@ -941,6 +941,12 @@ img {
     .about__data {
         scroll-snap-align: start !important;
         scroll-snap-stop: always !important;
+     
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        z-index: 5 !important;
+    
     }
 
     .about__grain,
