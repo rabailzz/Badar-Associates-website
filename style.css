@@ -886,67 +886,116 @@ img {
 @media screen and (max-width: 900px) {
 
     /* 1. Create a scrollable container wrapper */
+    /* About / Binder Section — Swipeable Mobile Carousel */
     .about {
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch;
-        padding: 1rem 0 !important;
+        position: relative;
     }
 
-    /* 2. Force the binder wrapper to stay at its full desktop size */
     .about__binder-wrapper {
         position: relative !important;
-        width: 900px !important;  /* Locks to exact desktop width */
-        height: 600px !important; /* Locks to desktop height */
-        margin: 2rem auto !important;
-        display: block !important;
-        transform: none !important; /* Remove scaling */
+        width: 100% !important;
+        height: 480px !important;
+        max-width: 100% !important;
+        margin: 1.5rem auto !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch;
+        transform: none !important;
+        scrollbar-width: none !important;
+        border-radius: 14px;
     }
 
-    /* 3. Ensure the background binder image fits the 900px wrapper */
-    .about__frame {
-        width: 900px !important;
-        height: 600px !important;
-        position: absolute !important;
-        top: 0;
-        left: 0;
-        z-index: 1;
+    .about__binder-wrapper::-webkit-scrollbar {
+        display: none !important;
     }
 
-    /* 4. Keep desktop absolute positioning for left page */
+    /* Hide the flat two-page background image, each panel gets its own zoomed slice instead */
+    .about__binder-wrapper > img.about__binder {
+        display: none !important;
+    }
+
+    .about__photo-stack,
+    .about__data {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        height: 100% !important;
+        scroll-snap-align: start !important;
+        scroll-snap-stop: always !important;
+        box-sizing: border-box !important;
+        padding: 2rem 1.5rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        z-index: 2 !important;
+        background-image: url('binder (2).png');
+        background-repeat: no-repeat !important;
+        background-size: 200% 100% !important; /* zoomed in — shows half the binder per panel */
+        border-radius: 14px;
+    }
+
     .about__photo-stack {
-        position: absolute !important;
-        top: 15% !important;
-        left: 6% !important;
-        width: 350px !important;
-        z-index: 2;
+        background-position: left center !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .about__data {
+        background-position: right center !important;
+        color: var(--dark-color) !important;
+    }
+
+    .about__frame {
+        position: relative !important;
+        top: auto !important;
+        width: 65% !important;
+        margin: 0.5rem auto !important;
     }
 
     .about__portrait {
-        width: 100% !important;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 55% !important;
         height: auto !important;
-    }
-
-    /* 5. Keep desktop absolute positioning for right page */
-    .about__data {
-        position: absolute !important;
-        top: 12% !important;
-        right: 8% !important;
-        width: 380px !important;
-        z-index: 2;
-        text-align: left !important;
-        padding: 0 !important;
+        margin: 0 auto !important;
     }
 
     .about__description {
-        font-size: 15px !important;
-        line-height: 1.4 !important;
+        position: relative !important;
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        margin-top: 1rem !important;
     }
 
-    .about__sign, 
-    .about__grain {
-        display: block !important;
+    .about__sign {
+        position: relative !important;
+        bottom: auto !important;
+        right: auto !important;
+        width: 110px !important;
+        margin-top: auto !important;
+        align-self: flex-end !important;
     }
-}
+
+    .about__grain {
+        display: none !important;
+    }
+
+    /* Little swipe hint under the binder */
+    .about::after {
+        content: "← swipe to see more →";
+        display: block;
+        text-align: center;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.55);
+        font-style: italic;
+        margin-top: 0.5rem;
+    }}
     /* Services Section */
     .services__content {
         display: flex;
