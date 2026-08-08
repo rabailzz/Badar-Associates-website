@@ -888,22 +888,21 @@ img {
     /* 1. Create a scrollable container wrapper */
     /* About / Binder Section — Swipeable Mobile Carousel */
     /* About / Binder Section — Zoomed, Swipeable, Same Layout as Desktop */
-    .about {
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory !important;
-        scrollbar-width: none !important;
-        padding: 1rem 0 !important;
-    }
 
-    .about::-webkit-scrollbar {
-        display: none !important;
-    }
 
  /*=============== ABOUT SECTION — MOBILE FINAL OVERRIDE ===============*/
 @media screen and (max-width: 900px) {
    /* About / Binder Section — Zoomed, Swipeable, Same Layout as Desktop */
+       .about__description {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        color: #000 !important;
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+        z-index: 6 !important;
+        position: relative !important;
+    }
     .about {
         overflow-x: auto !important;
         overflow-y: hidden !important;
