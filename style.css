@@ -897,6 +897,13 @@ img {
       #about {
         padding-top: -2rem !important;
     }
+     .about__sign {
+        position: absolute !important;
+        bottom: 30px !important;
+        right: 20px !important;
+        width: 90px !important;
+        z-index: 6 !important;
+    }
     
     .about {
         overflow-x: auto !important;
@@ -945,6 +952,7 @@ img {
     }
 
     .about__data {
+           position: relative !important;
                 padding-top: 30px !important;
          display: block !important;
         opacity: 1 !important;
@@ -954,8 +962,8 @@ img {
         scroll-snap-stop: always !important;
     }
 
-        .about__description br {
-        display: none !important;   /* kill the manual line breaks so text wraps naturally as paragraphs */
+       #about .about__description br {
+        display: none !important;
     }
 
     .about__photo-stack {
@@ -992,6 +1000,7 @@ img {
     }
     
 }
+    
     /* Services Section */
     .services__content {
         display: flex;
