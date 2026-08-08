@@ -916,7 +916,7 @@ img {
         width: 700px !important;   /* zoomed canvas — same proportions as desktop */
         height: 600px !important;
         max-width: none !important;
-        margin: 5rem 0 1rem !important;  /* pushed down — was 1rem 0 */
+        margin: 7rem 0 1rem !important;  /* pushed down — was 1rem 0 */
         top: 0 !important;
         transform: none !important;
         flex-shrink: 0;
