@@ -965,7 +965,7 @@ img {
     }
 
     .about__portrait {
-        top: 44% !important;   /* was 45% on desktop — pull the photo up to sit inside the frame properly */
+        top: 52% !important;   /* was 45% on desktop — pull the photo up to sit inside the frame properly */
     }
 
     
