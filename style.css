@@ -916,7 +916,7 @@ img {
         width: 700px !important;   /* zoomed canvas — same proportions as desktop */
         height: 600px !important;
         max-width: none !important;
-        margin: 7rem 0 1rem !important;  /* pushed down — was 1rem 0 */
+        margin: 5rem 0 1rem !important;  /* pushed down — was 1rem 0 */
         top: 0 !important;
         transform: none !important;
         flex-shrink: 0;
@@ -928,10 +928,7 @@ img {
        or .about__data internals here. They'll auto-scale correctly against
        the 950px wrapper above. We only add snap points: */
 
-    .about__photo-stack {
-        scroll-snap-align: start !important;
-        scroll-snap-stop: always !important;
-    }
+  
 
    
     .about__description {
@@ -947,6 +944,7 @@ img {
     }
 
     .about__data {
+                padding-top: 40px !important;
          display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
@@ -954,6 +952,13 @@ img {
         scroll-snap-align: start !important;
         scroll-snap-stop: always !important;
     }
+
+    .about__photo-stack {
+        top: 2% !important;   /* was 10% on desktop — pulls photo/title up */
+        scroll-snap-align: start !important;
+        scroll-snap-stop: always !important;
+    }
+
 
     .about__grain,
     .about__sign {
