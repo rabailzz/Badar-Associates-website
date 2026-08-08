@@ -939,7 +939,7 @@ img {
         line-height: 1.5 !important;
         z-index: 6 !important;
         position: relative !important;
-        margin-left:100px;
+        margin-left:0px;
     }
 
     .about__data {
