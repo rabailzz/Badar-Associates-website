@@ -951,10 +951,12 @@ img {
         margin-left:60px;
     }
 
-    .about__data {
-           position: relative !important;
-                padding-top: 0px !important;
-         display: block !important;
+  .about__data {
+        position: relative !important;
+        top: 0 !important;              /* ← kills the old 12% offset from an earlier block */
+        right: auto !important;
+        padding-top: 10px !important;
+        display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
         z-index: 5 !important;
