@@ -894,6 +894,10 @@ img {
 @media screen and (max-width: 900px) {
    /* About / Binder Section — Zoomed, Swipeable, Same Layout as Desktop */
     /* About / Binder Section — Zoomed, Swipeable, Same Layout as Desktop */
+      #about {
+        padding-top: 1rem !important;
+    }
+    
     .about {
         overflow-x: auto !important;
         overflow-y: hidden !important;
