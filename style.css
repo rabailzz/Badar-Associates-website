@@ -953,7 +953,7 @@ img {
 
     .about__data {
            position: relative !important;
-                padding-top: 30px !important;
+                padding-top: 0px !important;
          display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
