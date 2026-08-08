@@ -926,7 +926,7 @@ img {
         transform: none !important;
         flex-shrink: 0;
         display: block !important;
-        margin-top:100px !important;
+  
     }
 
     /* Everything below (top/left/width %) stays EXACTLY as your desktop rules —
