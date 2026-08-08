@@ -944,7 +944,7 @@ img {
     }
 
     .about__data {
-                padding-top: 40px !important;
+                padding-top: 60px !important;
          display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
@@ -954,7 +954,7 @@ img {
     }
 
     .about__photo-stack {
-        top: 2% !important;   /* was 10% on desktop — pulls photo/title up */
+        top: 4% !important;   /* was 10% on desktop — pulls photo/title up */
         scroll-snap-align: start !important;
         scroll-snap-stop: always !important;
     }
