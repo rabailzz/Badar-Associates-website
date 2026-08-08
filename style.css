@@ -939,7 +939,7 @@ img {
 
    
     .about__description {
-             
+                     margin-top: -15px !important;
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
