@@ -1004,8 +1004,7 @@ img {
 }
     
     /* Services Section */
-  /* Services Section */
-  /* Services Section */
+/* Services Section */
     .services__content {
         display: flex;
         flex-direction: column;
@@ -1028,7 +1027,7 @@ img {
     .services__card:nth-child(1) .services__images {
         position: relative !important;
         width: 220px !important;
-        height: 380px !important;
+        height: 320px !important;
         margin: 0 auto;
     }
 
@@ -1044,20 +1043,20 @@ img {
     .services__card:nth-child(1) .services__hanging-text {
         display: block !important;
         position: absolute !important;
-        top: 140px !important;
+        top: 35px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         width: 100% !important;
         text-align: center !important;
-        font-size: 1.3rem !important;
-        color: #2b1a10 !important;
+        font-size: 1.5rem !important;
+        color: #fff !important;
         z-index: 4 !important;
         pointer-events: none;
     }
 
     .services__card:nth-child(1) .services__bg-img {
         position: absolute !important;
-        top: 190px !important;
+        top: 130px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         width: 190px !important;
@@ -1066,7 +1065,7 @@ img {
 
     .services__card:nth-child(1) .services__main-img1 {
         position: absolute !important;
-        top: 230px !important;
+        top: 170px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         width: 190px !important;
@@ -1122,7 +1121,6 @@ img {
     .services__summary {
         font-size: 0.85rem;
     }
-
     /* Contact Section */
     .contact__container {
         display: flex;
