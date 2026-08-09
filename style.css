@@ -1133,6 +1133,7 @@ img {
     .contact__map {
         max-width: 100% !important;
         margin: 0 auto;
+        margin-left:0 !important;
     }
 
     .contact__right-column {
