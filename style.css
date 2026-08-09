@@ -951,19 +951,16 @@ img {
         margin-left:60px;
     }
 
-  .about__data {
-        position: relative !important;
-        top: 0 !important;              /* ← kills the old 12% offset from an earlier block */
+.about__data {
+        position: absolute !important;   /* back to absolute — relative was the bug */
+        top: 0 !important;
         right: auto !important;
         padding-top: 10px !important;
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
         z-index: 5 !important;
-        scroll-snap-align: start !important;
-        scroll-snap-stop: always !important;
     }
-
        #about .about__description br {
         display: none !important;
     }
