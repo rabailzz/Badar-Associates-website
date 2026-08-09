@@ -857,7 +857,7 @@ img {
     .home__lamp {
         width: 200px !important;
         height: 100px !important;
-        top: 3% !important;
+        top: -30% !important;
         left: 50% !important;
         transform: translateX(-50%);
         z-index: 5 !important;
