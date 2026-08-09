@@ -964,7 +964,13 @@ img {
        #about .about__description br {
         display: none !important;
     }
-
+.about__sign {
+        position: absolute !important;
+        bottom: 60px !important;
+        right: 40px !important;
+        width: 90px !important;
+        z-index: 20 !important;
+    }
     .about__photo-stack {
         top: 4% !important;
         scroll-snap-align: start !important;
