@@ -1043,6 +1043,7 @@ img {
     .services__card:nth-child(1) .services__hanging-text {
         display: block !important;
         position: absolute !important;
+        height:250px;
         top: 35px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
