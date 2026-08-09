@@ -1011,7 +1011,7 @@ img {
         transform: translateX(-50%) !important;
         width: 220px !important;
         z-index: 3 !important;
-      height:300px !important;
+      height:200px !important;
     }
     
     .services__card:nth-child(1) .services__hanging-text {
