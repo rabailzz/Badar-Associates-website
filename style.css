@@ -1033,7 +1033,7 @@ img {
 
     .services__card:nth-child(1) .services__hanging {
         position: absolute !important;
-        top: -50px !important;
+        top: -90px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         width: 220px !important;
