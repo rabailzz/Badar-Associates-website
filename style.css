@@ -231,7 +231,7 @@ img {
 .home__lamp {
     width: 400px;
     height: 350px;
-    top: -20%;
+    top: -30%;
     left: 40%;
     transform: translateX(-50%);
     position: absolute;
