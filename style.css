@@ -1003,14 +1003,7 @@ img {
         margin: 0 auto;
     }
 
-    .services__card:nth-child(1) .services__hanging {
-        position: absolute !important;
-        top: -150px !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        width: 220px !important;
-        z-index: 3 !important;
-    }
+  
 
     .services__card:nth-child(1) .services__hanging-text {
         display: block !important;
