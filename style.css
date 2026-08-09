@@ -1014,7 +1014,7 @@ img {
       height:200px !important;
     }
     
-    .services__card:nth-child(1) .services__hanging-text {
+ #services .services__card:nth-child(1) .services__hanging-text {
         display: block !important;
         position: absolute !important;
         top: 55px !important;
@@ -1027,7 +1027,6 @@ img {
         z-index: 4 !important;
         pointer-events: none;
     }
-
     .services__card:nth-child(1) .services__bg-img {
         position: absolute !important;
         top: 130px !important;
