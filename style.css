@@ -746,7 +746,9 @@ img {
 }
 
 
-/*=============== REFINED MOBILE STYLES ===============*/
+
+
+    /*=============== REFINED MOBILE STYLES (FLATTENED — NO NESTING) ===============*/
 @media screen and (max-width: 900px) {
     .container {
         max-width: 100% !important;
@@ -794,16 +796,14 @@ img {
         font-size: 0.8rem;
     }
 
-    /* Remove the mobile toggle/blue icon */
-    .nav__toggle, 
-    .nav__close, 
+    .nav__toggle,
+    .nav__close,
     .nav__menu div[class*="toggle"],
     .nav i {
         display: none !important;
     }
 
-    /* Home Section */
-
+    /* ===== Home Section ===== */
     .home__data {
         display: flex;
         flex-direction: column;
@@ -811,12 +811,10 @@ img {
         text-align: center;
     }
 
-
-
-  .home__container {
+    .home__container {
         grid-template-columns: 1fr !important;
         text-align: center;
-        padding-top: 6rem !important; /* Increased to push everything down below the header */
+        padding-top: 6rem !important;
         row-gap: 1rem !important;
     }
 
@@ -831,10 +829,10 @@ img {
         position: static !important;
         font-size: 0.8rem !important;
         max-width: 100%;
-        margin-top: 0.5rem !important; /* Pushes the description down from the title */
+        margin-top: 0.5rem !important;
         margin-bottom: 1rem !important;
     }
-    /* Home Images: Lamp, Glow, and House adjusted */
+
     .home__images {
         position: relative !important;
         width: 300px !important;
@@ -874,37 +872,17 @@ img {
         z-index: 4 !important;
     }
 
-    /* Completely hide salt and pepper on mobile */
-    .home__salt-1, 
-    .home__salt-2, 
+    .home__salt-1,
+    .home__salt-2,
     .home__pepper {
         display: none !important;
     }
 
-    /* About / Binder Section */
-/*=============== SCROLLABLE DESKTOP BINDER ON MOBILE ===============*/
-@media screen and (max-width: 900px) {
-
-    /* 1. Create a scrollable container wrapper */
-    /* About / Binder Section — Swipeable Mobile Carousel */
-    /* About / Binder Section — Zoomed, Swipeable, Same Layout as Desktop */
-
-
- /*=============== ABOUT SECTION — MOBILE FINAL OVERRIDE ===============*/
-@media screen and (max-width: 900px) {
-   /* About / Binder Section — Zoomed, Swipeable, Same Layout as Desktop */
-    /* About / Binder Section — Zoomed, Swipeable, Same Layout as Desktop */
-      #about {
-        padding-top: -2rem !important;
+    /* ===== About / Binder Section ===== */
+    #about {
+        padding-top: 1rem !important;
     }
-     .about__sign {
-        position: absolute !important;
-        bottom: 30px !important;
-        right: 20px !important;
-        width: 90px !important;
-        z-index: 6 !important;
-    }
-    
+
     .about {
         overflow-x: auto !important;
         overflow-y: hidden !important;
@@ -918,41 +896,30 @@ img {
         display: none !important;
     }
 
-.about__binder-wrapper {
+    .about__binder-wrapper {
         position: relative !important;
-        width: 700px !important;   /* zoomed canvas — same proportions as desktop */
+        width: 700px !important;
         height: 600px !important;
         max-width: none !important;
-        margin: 5rem 0 1rem !important;  /* pushed down — was 1rem 0 */
+        margin: 1.5rem 0 1rem !important;
         top: 0 !important;
         transform: none !important;
         flex-shrink: 0;
         display: block !important;
     }
 
-    /* Everything below (top/left/width %) stays EXACTLY as your desktop rules —
-       do not override .about__photo-stack, .about__frame, .about__portrait,
-       or .about__data internals here. They'll auto-scale correctly against
-       the 950px wrapper above. We only add snap points: */
-
-  
-
-   
-    .about__description {
-                     margin-top: -30px !important;
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        color: #000 !important;
-        font-size: 13px !important;
-        line-height: 1.5 !important;
-        z-index: 6 !important;
-        position: relative !important;
-        margin-left:60px;
+    .about__photo-stack {
+        top: 4% !important;
+        scroll-snap-align: start !important;
+        scroll-snap-stop: always !important;
     }
 
-.about__data {
-        position: absolute !important;   /* back to absolute — relative was the bug */
+    .about__portrait {
+        top: 50% !important;
+    }
+
+    .about__data {
+        position: absolute !important;
         top: 0 !important;
         right: auto !important;
         padding-top: 60px !important;
@@ -961,39 +928,41 @@ img {
         visibility: visible !important;
         z-index: 5 !important;
     }
-       #about .about__description br {
+
+    .about__description {
+        margin-top: -30px !important;
+        margin-left: 60px !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        color: #000 !important;
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+        z-index: 6 !important;
+        position: relative !important;
+    }
+
+    #about .about__description br {
         display: none !important;
     }
-.about__sign {
+
+    .about__grain {
+        display: block !important;
+    }
+
+    .about__sign {
+        display: block !important;
         position: absolute !important;
         bottom: 60px !important;
         right: 40px !important;
         width: 90px !important;
-        z-index: 20 !important;
-    }
-    .about__photo-stack {
-        top: 4% !important;
-        scroll-snap-align: start !important;
-        scroll-snap-stop: always !important;
+        z-index: 50 !important;
     }
 
-    .about__portrait {
-        top: 50% !important;   /* was 45% on desktop — pull the photo up to sit inside the frame properly */
-    }
-
-    
-
- 
-
-    .about__grain,
-    .about__sign {
-        display: block !important;
-    }
-
-    /* Swipe hint */
     .about::after {
         content: "";
     }
+
     #about::before {
         content: "← swipe to flip the page →";
         display: block;
@@ -1003,11 +972,8 @@ img {
         font-style: italic;
         margin-bottom: 0.5rem;
     }
-    
-}
-    
-    /* Services Section */
-/* Services Section */
+
+    /* ===== Services Section ===== */
     .services__content {
         display: flex;
         flex-direction: column;
@@ -1026,7 +992,6 @@ img {
         margin-top: 2rem;
     }
 
-    /* Card 1 — has hanging sign + banner text */
     .services__card:nth-child(1) .services__images {
         position: relative !important;
         width: 220px !important;
@@ -1075,7 +1040,6 @@ img {
         z-index: 2 !important;
     }
 
-    /* Cards 2 & 3 — just bg-img + one main image, no hanging sign */
     .services__card:nth-child(2) .services__images,
     .services__card:nth-child(3) .services__images {
         position: relative !important;
@@ -1124,7 +1088,8 @@ img {
     .services__summary {
         font-size: 0.85rem;
     }
-    /* Contact Section */
+
+    /* ===== Contact Section ===== */
     .contact__container {
         display: flex;
         flex-direction: column !important;
@@ -1136,7 +1101,7 @@ img {
     .contact__map {
         max-width: 100% !important;
         margin: 0 auto;
-        margin-left:-10px !important;
+        margin-left: -10px !important;
     }
 
     .contact__right-column {
@@ -1155,7 +1120,7 @@ img {
         font-size: 24px !important;
     }
 
-    /* Footer */
+    /* ===== Footer ===== */
     .footer__container {
         display: flex;
         flex-direction: column !important;
