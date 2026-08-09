@@ -1004,10 +1004,11 @@ img {
 }
     
     /* Services Section */
+  /* Services Section */
     .services__content {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 2.5rem;
         padding: 1rem 0;
     }
 
@@ -1015,50 +1016,106 @@ img {
         flex-direction: column !important;
         align-items: center;
         text-align: center;
-        gap: 15px;
+        gap: 10px;
     }
 
     .services__card:first-child {
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
 
-    .services__images {
+    /* Card 1 — has hanging sign + banner text */
+    .services__card:nth-child(1) .services__images {
         position: relative !important;
-        width: 240px !important;
-        height: 200px !important;
+        width: 220px !important;
+        height: 320px !important;
         margin: 0 auto;
-        left: auto !important;
     }
 
-    .services__hanging, 
-    .services__bg-img, 
-    .services__main-img1, 
-    .services__main-img2, 
-    .services__main-img3 {
+    .services__card:nth-child(1) .services__hanging {
         position: absolute !important;
+        top: 0 !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
-        width: 240px !important;
+        width: 220px !important;
+        z-index: 3 !important;
     }
 
-    .services__hanging {
-        top: -150px !important;
+    .services__card:nth-child(1) .services__hanging-text {
+        display: block !important;
+        position: absolute !important;
+        top: 35px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 100% !important;
+        text-align: center !important;
+        font-size: 1.5rem !important;
+        color: #fff !important;
+        z-index: 4 !important;
+        pointer-events: none;
     }
 
-    .services__paper-bg,
-    .services__hanging-text {
+    .services__card:nth-child(1) .services__bg-img {
+        position: absolute !important;
+        top: 130px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 190px !important;
+        z-index: 1 !important;
+    }
+
+    .services__card:nth-child(1) .services__main-img1 {
+        position: absolute !important;
+        top: 170px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 190px !important;
+        z-index: 2 !important;
+    }
+
+    /* Cards 2 & 3 — just bg-img + one main image, no hanging sign */
+    .services__card:nth-child(2) .services__images,
+    .services__card:nth-child(3) .services__images {
+        position: relative !important;
+        width: 200px !important;
+        height: 220px !important;
+        margin: 0 auto;
+    }
+
+    .services__card:nth-child(2) .services__bg-img,
+    .services__card:nth-child(3) .services__bg-img {
+        position: absolute !important;
+        top: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 180px !important;
+        z-index: 1 !important;
+    }
+
+    .services__card:nth-child(2) .services__main-img2 {
+        position: absolute !important;
+        top: 35px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 150px !important;
+        z-index: 2 !important;
+    }
+
+    .services__card:nth-child(3) .services__main-img3 {
+        position: absolute !important;
+        top: 40px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 155px !important;
+        z-index: 2 !important;
+    }
+
+    .services__paper-bg {
         display: none !important;
     }
 
     .services__intro {
-        margin-top: 0 !important;
+        margin-top: 1rem !important;
         padding: 0 1rem;
-    }
-
-    .services__card:nth-child(1) .services__intro,
-    .services__card:nth-child(2) .services__intro,
-    .services__card:nth-child(3) .services__intro {
-        margin-top: 0 !important;
     }
 
     .services__summary {
