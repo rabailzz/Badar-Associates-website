@@ -1004,7 +1004,15 @@ img {
     }
 
   
-
+  .services__card:nth-child(1) .services__hanging {
+        position: absolute !important;
+        top: -100px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 220px !important;
+        z-index: 3 !important;
+    }
+    
     .services__card:nth-child(1) .services__hanging-text {
         display: block !important;
         position: absolute !important;
@@ -1054,14 +1062,7 @@ img {
         width: 180px !important;
         z-index: 1 !important;
     }
-  .services__card:nth-child(1) .services__hanging {
-        position: absolute !important;
-        top: -150px !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        width: 220px !important;
-        z-index: 3 !important;
-    }
+
     .services__card:nth-child(2) .services__main-img2 {
         position: absolute !important;
         top: 35px !important;
